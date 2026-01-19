@@ -51,58 +51,116 @@
     <nav
       class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-95 backdrop-blur-sm shadow-lg"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="flex justify-between items-center h-24 sm:h-28 md:h-32 lg:h-36"
-        >
+      <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+        <div class="flex justify-between items-center h-16 sm:h-20 md:h-24">
           <!-- Logo -->
           <div class="flex-shrink-0">
             <img
               src="https://raw.githubusercontent.com/frontenddeveloper2025dev/landingpage/refs/heads/main/wuwei%20logo.png"
               alt="Wu Wei Logo"
-              class="h-16 sm:h-20 md:h-24 lg:h-28 w-auto"
+              class="h-12 sm:h-16 md:h-20 lg:h-24 w-auto"
+              loading="lazy"
               onerror="this.style.display='none';"
             />
           </div>
-          <!-- Navigation Menu -->
-          <div class="flex-1 flex justify-center">
-            <div class="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
+          <!-- Menu Button (Mobile) -->
+          <button
+            id="menu-toggle"
+            class="lg:hidden p-2 rounded-md text-gray-800 hover:bg-gray-100"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewbox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+          <!-- Navigation Menu (Desktop) -->
+          <div class="hidden lg:flex flex-1 justify-center">
+            <div class="flex items-center space-x-6">
               <a
                 href="#inicio"
-                class="text-gray-800 hover:text-purple-600 px-2 sm:px-3 py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors"
+                class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
                 >Inicio</a
               >
               <a
                 href="#nosotros"
-                class="text-gray-800 hover:text-purple-600 px-2 sm:px-3 py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors"
+                class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
                 >Nosotros</a
               >
               <a
                 href="#mision"
-                class="text-gray-800 hover:text-purple-600 px-2 sm:px-3 py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors"
+                class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
                 >Misión</a
               >
               <a
                 href="#vision"
-                class="text-gray-800 hover:text-purple-600 px-2 sm:px-3 py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors"
+                class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
                 >Visión</a
               >
               <a
                 href="#valores"
-                class="text-gray-800 hover:text-purple-600 px-2 sm:px-3 py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors"
+                class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
                 >Valores</a
               >
               <a
                 href="#kimonos"
-                class="text-gray-800 hover:text-purple-600 px-2 sm:px-3 py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors"
+                class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
                 >Kimonos</a
               >
               <a
                 href="#contacto"
-                class="text-gray-800 hover:text-purple-600 px-2 sm:px-3 py-2 text-xs sm:text-sm lg:text-base font-medium transition-colors"
+                class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
                 >Contacto</a
               >
             </div>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden pb-4">
+          <div class="flex flex-col space-y-2">
+            <a
+              href="#inicio"
+              class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors mobile-link"
+              >Inicio</a
+            >
+            <a
+              href="#nosotros"
+              class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors mobile-link"
+              >Nosotros</a
+            >
+            <a
+              href="#mision"
+              class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors mobile-link"
+              >Misión</a
+            >
+            <a
+              href="#vision"
+              class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors mobile-link"
+              >Visión</a
+            >
+            <a
+              href="#valores"
+              class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors mobile-link"
+              >Valores</a
+            >
+            <a
+              href="#kimonos"
+              class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors mobile-link"
+              >Kimonos</a
+            >
+            <a
+              href="#contacto"
+              class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors mobile-link"
+              >Contacto</a
+            >
           </div>
         </div>
       </div>
@@ -111,13 +169,13 @@
       <!-- Hero Section -->
       <section
         id="inicio"
-        class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden pt-48 sm:pt-52 md:pt-56 lg:pt-60"
+        class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden pt-20 sm:pt-24 md:pt-32"
       >
         <div
-          class="text-center text-white px-4 sm:px-6 max-w-6xl relative z-10"
+          class="text-center text-white px-3 sm:px-6 max-w-6xl relative z-10 py-8"
         >
           <!-- Logo integrado más grande y centrado -->
-          <div class="mb-12 sm:mb-16 md:mb-20">
+          <div class="mb-6 sm:mb-12 md:mb-16">
             <a
               id="logo-link"
               href="#"
@@ -126,67 +184,76 @@
               <img
                 src="https://raw.githubusercontent.com/frontenddeveloper2025dev/landingpage/refs/heads/main/wuwei%20logo.png"
                 alt="Wu Wei Neurospicy MX Logo"
-                class="h-32 sm:h-40 md:h-56 lg:h-72 xl:h-80 w-auto mx-auto mb-8 sm:mb-10 md:mb-12"
+                class="h-32 sm:h-48 md:h-64 lg:h-80 xl:h-96 w-auto mx-auto mb-4 sm:mb-8 md:mb-12"
+                loading="lazy"
                 onerror="this.style.display='none'; console.error('Logo failed to load');"
               />
             </a>
           </div>
           <h1
             id="hero-title"
-            class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 sm:mb-8 md:mb-10 leading-tight px-2"
+            class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight"
           >
             Wu Wei Neurospicy MX
           </h1>
           <p
             id="hero-subtitle"
-            class="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-10 sm:mb-12 md:mb-16 opacity-90 px-2 max-w-4xl mx-auto"
+            class="text-base sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-10 md:mb-12 opacity-90 max-w-4xl mx-auto"
           >
             moda consciente con flow espiritual
           </p>
-          <button
-            id="cta-button"
-            class="bg-white text-purple-800 px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 rounded-full text-lg sm:text-xl md:text-2xl font-semibold hover:bg-opacity-90 transition-all shadow-2xl"
+          <div
+            class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center"
           >
-            Descubre tu merch perfecto
-          </button>
+            <a
+              href="https://tally.so/r/rjOX5L"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="cta-button"
+              class="bg-yellow-400 text-gray-900 px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full text-lg sm:text-xl md:text-2xl font-bold hover:bg-yellow-300 hover:scale-110 transition-all shadow-2xl inline-block"
+              style="animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+            >
+              COMPRAR
+            </a>
+          </div>
           <!-- Espacio adicional después del botón -->
-          <div class="mt-16 sm:mt-20 md:mt-24"></div>
+          <div class="mt-8 sm:mt-16 md:mt-20"></div>
         </div>
       </section>
       <!-- Descripción de la marca -->
       <section
         id="nosotros"
-        class="py-12 sm:py-16 px-4 sm:px-6"
+        class="py-10 sm:py-12 md:py-16 px-3 sm:px-6"
         style="background-color: #001f3f"
       >
         <div class="max-w-5xl mx-auto text-center text-white">
           <h2
-            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 gradient-text px-2"
+            class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 gradient-text"
           >
             Un refugio textil para almas libres
           </h2>
           <div
-            class="text-lg sm:text-xl md:text-2xl leading-relaxed space-y-4 sm:space-y-6 px-2 max-w-4xl mx-auto"
+            class="text-sm sm:text-lg md:text-xl lg:text-2xl leading-relaxed space-y-3 sm:space-y-4 md:space-y-6 max-w-4xl mx-auto"
           >
             <p>
               Wu Wei Clothing MX es una marca nacida en la
               <strong>Ciudad de México</strong> como un refugio textil para
-              almas libres, mentes neurospicy, disidencias y cuerpos que no
-              entran en moldes normativos 🧠🌶️🏠.
+              almas libres, mentes neurospicy y cuerpos que no entran en moldes
+              normativos
             </p>
             <p>
-              No es solo ropa, es presencia, es acto creativo y político, es una
-              forma de habitar el cuerpo con amor, con flow y sin permiso ✨🙌🧵
+              No es solo ropa, es presencia, es acto creativo, es una forma de
+              habitar el cuerpo con amor, con flow y sin permiso.
             </p>
           </div>
           <!-- Botón de regreso al inicio -->
-          <div class="mt-8 sm:mt-10">
+          <div class="mt-6 sm:mt-8 md:mt-10">
             <a
               href="#inicio"
-              class="inline-flex items-center bg-white bg-opacity-20 text-white px-6 py-3 rounded-full hover:bg-opacity-30 transition-all text-lg"
+              class="inline-flex items-center bg-white bg-opacity-20 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-opacity-30 transition-all text-sm sm:text-base md:text-lg"
             >
               <svg
-                class="w-5 h-5 mr-2"
+                class="w-4 h-4 sm:w-5 sm:h-5 mr-2"
                 fill="none"
                 stroke="currentColor"
                 viewbox="0 0 24 24"
@@ -212,7 +279,7 @@
           <h2
             class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-10 px-2"
           >
-            Cada prenda de vestir es:
+            Cada kimono es:
           </h2>
           <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8"
@@ -221,21 +288,21 @@
               class="card-hover bg-white bg-opacity-10 p-6 sm:p-8 rounded-2xl backdrop-blur-sm"
             >
               <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold">
-                ✨ un ritual 📿🧎‍♀️
+                un ritual
               </h3>
             </div>
             <div
               class="card-hover bg-white bg-opacity-10 p-6 sm:p-8 rounded-2xl backdrop-blur-sm"
             >
               <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold">
-                🛡️una armadura suave 🌸
+                una armadura suave
               </h3>
             </div>
             <div
               class="card-hover bg-white bg-opacity-10 p-6 sm:p-8 rounded-2xl backdrop-blur-sm sm:col-span-2 md:col-span-1"
             >
               <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold">
-                🧘‍♀️ una declaración viva de quién eres🧠
+                una declaración viva de quién eres
               </h3>
             </div>
           </div>
@@ -282,34 +349,32 @@
             >
               Wu Wei es un principio del Taoísmo que significa:
               <strong
-                >no forzar 🌊, fluir con la vida 🍃, actuar sin violencia
-                interna 🧘‍♀️</strong
+                >no forzar, fluir con la vida, actuar sin violencia
+                interna.</strong
               >
             </p>
             <div
               class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 text-gray-700"
             >
               <div class="space-y-3 sm:space-y-4">
+                <p class="text-base sm:text-lg md:text-xl">No es pasividad</p>
                 <p class="text-base sm:text-lg md:text-xl">
-                  No es pasividad ❌🛌
+                  Es potencia tranquila
                 </p>
                 <p class="text-base sm:text-lg md:text-xl">
-                  Es potencia tranquila⚡🌿
-                </p>
-                <p class="text-base sm:text-lg md:text-xl">
-                  Es crear desde el centro 🎨💛
+                  Es crear desde el centro
                 </p>
               </div>
               <div class="space-y-3 sm:space-y-4">
                 <p class="text-base sm:text-lg md:text-xl">
-                  Es seguir tu intuición sin burnout 🔥💫
+                  Es seguir tu intuición sin burnout
                 </p>
                 <p class="text-base sm:text-lg md:text-xl">
-                  Wu Wei no te obliga a correr 🏃‍♀️💨
+                  Wu Wei no te obliga a correr.
                 </p>
                 <p class="text-base sm:text-lg md:text-xl">
-                  Te invita a respirar, a actua con intención 🎯 y a vivir desde
-                  el presente 🕊️🕰️
+                  Te invita a respirar, a actuar con intención, y a vivir desde
+                  el presente
                 </p>
               </div>
             </div>
@@ -355,22 +420,15 @@
             <div
               class="space-y-4 sm:space-y-6 text-lg sm:text-xl md:text-2xl px-2"
             >
-              <p>Vestir el alma con propósito 💫👘💖</p>
-              <p>
-                Diseñar prendas que te abracen profundo 🤗💞, no que te limiten
-                🚫🧩
-              </p>
+              <p>Vestir el alma con propósito.</p>
+              <p>Diseñar prendas que te abracen, no que te limiten.</p>
             </div>
             <div
               class="space-y-4 sm:space-y-6 text-lg sm:text-xl md:text-2xl px-2"
             >
-              <p>
-                Convertir cada kimono y prenda de vestir en un mantra vivo 🔮🕊️,
-                un espejo del ser ✨👁️, un refugio sagrado 🌿🏮
-              </p>
+              <p>Convertir cada kimono en un mantra, un espejo, un refugio.</p>
               <p>
                 Empoderar con diseño, espiritualidad y autoexpresión radical
-                🔥🎨🌈
               </p>
             </div>
           </div>
@@ -421,21 +479,15 @@
               class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-lg sm:text-xl md:text-2xl"
             >
               <div class="space-y-3 sm:space-y-4">
-                <p>Queremos ser comunidad 🤝💜🌟</p>
-                <p>Queremos ser casa para lxs neurospicy🧠🌶️🏠✨</p>
-                <p>Queremos elevar a quienes crean desde el alma ✨🙌🧵</p>
+                <p>Queremos ser comunidad</p>
+                <p>Queremos ser casa para lxs neurospicy</p>
+                <p>Queremos elevar a quienes crean desde el alma</p>
               </div>
               <div class="space-y-3 sm:space-y-4">
-                <p>
-                  Queremos que la ropa no sea máscara 🎭❌, sino manifestación
-                  verdadera 🌟💫💖
-                </p>
-                <p>Wu Wei es tech 💻⚡y es arte🎨🌀</p>
-                <p>Es compasión 🤍🤲 y es claridad🔷💡</p>
-                <p>
-                  Es futuro suave 🌬️🌱, sin moldes , libre de ruido, libre para
-                  ser 🕊️✨
-                </p>
+                <p>Queremos que la ropa no sea máscara, sino manifestación</p>
+                <p>Wu Wei es tech y es arte</p>
+                <p>Es compasión y es claridad</p>
+                <p>Es futuro suave, sin moldes</p>
               </div>
             </div>
           </div>
@@ -486,7 +538,7 @@
                 Empoderamiento real
               </h3>
               <p class="text-gray-600 text-sm sm:text-base">
-                Vestirte como eres, vivir sin filtros 🔥💛
+                Vestirte como eres, vivir sin filtros
               </p>
             </div>
             <div class="card-hover bg-white rounded-2xl p-4 sm:p-6 shadow-lg">
@@ -496,7 +548,7 @@
                 Flow auténtico
               </h3>
               <p class="text-gray-600 text-sm sm:text-base">
-                Acción alineada, no reacción desesperada 🧘‍♀️⚡
+                Acción alineada, no reacción desesperada
               </p>
             </div>
             <div class="card-hover bg-white rounded-2xl p-4 sm:p-6 shadow-lg">
@@ -506,7 +558,7 @@
                 Inclusión corporal
               </h3>
               <p class="text-gray-600 text-sm sm:text-base">
-                Tu cuerpo es perfecto, la ropa se adapta 🤲💖🌈
+                Tu cuerpo es perfecto, la ropa se adapta
               </p>
             </div>
             <div class="card-hover bg-white rounded-2xl p-4 sm:p-6 shadow-lg">
@@ -516,7 +568,7 @@
                 Neurodivergencia visible
               </h3>
               <p class="text-gray-600 text-sm sm:text-base">
-                Pensar diferente es poder 🧠🌶️
+                Pensar diferente es poder
               </p>
             </div>
             <div class="card-hover bg-white rounded-2xl p-4 sm:p-6 shadow-lg">
@@ -526,7 +578,7 @@
                 Género libre
               </h3>
               <p class="text-gray-600 text-sm sm:text-base">
-                No más etiquetas. Solo expresión pura 🕊️🎨✨
+                No m��s etiquetas. Solo expresión pura
               </p>
             </div>
             <div class="card-hover bg-white rounded-2xl p-4 sm:p-6 shadow-lg">
@@ -536,7 +588,7 @@
                 Compasión encarnada
               </h3>
               <p class="text-gray-600 text-sm sm:text-base">
-                Inspiración en Avalokiteshvara y Tara Verde 💚🙏📿
+                Inspiración en Avalokiteshvara y Tara Verde
               </p>
             </div>
             <div class="card-hover bg-white rounded-2xl p-4 sm:p-6 shadow-lg">
@@ -546,7 +598,7 @@
                 Mindfulness textil
               </h3>
               <p class="text-gray-600 text-sm sm:text-base">
-                Diseño que respira contigo 👘💚
+                Diseño que respira contigo
               </p>
             </div>
             <div class="card-hover bg-white rounded-2xl p-4 sm:p-6 shadow-lg">
@@ -556,7 +608,7 @@
                 Autonomía radical
               </h3>
               <p class="text-gray-600 text-sm sm:text-base">
-                Creamos desde dentro, para nosotrxs, por nosotrxs 🎨✨
+                Creamos desde dentro, para nosotrxs, por nosotrxs
               </p>
             </div>
           </div>
@@ -594,8 +646,7 @@
           <h2
             class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 text-center text-white px-2"
           >
-            🌱🧘‍♀️ Kimonos unisex, playeras, hoodies, pines, toten bags,libretas,
-            tazas y más
+            Kimonos unisex y más
           </h2>
           <div class="text-center mb-8 sm:mb-10">
             <p class="text-lg sm:text-xl md:text-2xl text-white px-2 mb-4">
@@ -609,25 +660,19 @@
               >
                 <div class="text-center">
                   <p class="font-semibold text-lg">💰 Precio</p>
-                  <p class="text-xl font-bold">Comercio Justo</p>
+                  <p class="text-xl font-bold">$500 pesos</p>
                 </div>
                 <div class="text-center">
                   <p class="font-semibold text-lg">📏 Tallas</p>
-                  <p class="text-sm">
-                    CH • M • G • XG • XXG (si no la tenemos , puedes obtener el
-                    producto sobre pedido).
-                  </p>
+                  <p class="text-sm">CH • M • G XG • XXG</p>
                 </div>
                 <div class="text-center">
                   <p class="font-semibold text-lg">💳 Pago</p>
-                  <p class="text-sm">
-                    Tarjeta de crédito o transferencia en NU clabe interbancaria
-                    638180000145217121
-                  </p>
+                  <p class="text-sm">Tarjeta o transferencia</p>
                 </div>
                 <div class="text-center">
-                  <p class="font-semibold text-lg">📬​ Entrega</p>
-                  <p class="text-sm">por paquetería</p>
+                  <p class="font-semibold text-lg">🚴‍♀️ Entrega</p>
+                  <p class="text-sm">En bicicleta</p>
                 </div>
               </div>
             </div>
@@ -637,7 +682,7 @@
             <button
               class="bg-white text-purple-800 px-8 sm:px-10 py-4 sm:py-5 rounded-full text-lg sm:text-xl font-semibold hover:bg-opacity-90 transition-all shadow-2xl"
             >
-              Ver Colección y productos en redes sociales
+              Ver Colección Completa
             </button>
           </div>
           <!-- Botón de regreso al inicio -->
@@ -691,7 +736,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="social-icon bg-white p-4 sm:p-5 rounded-full shadow-lg hover:shadow-xl"
-              onclick="window.open('https://www.instagram.com/wuweineurospicy_clothing/', '_blank'); return false;"
+              onclick="window.open('https://www.instagram.com/wuweineurospicy_clothing/', '_blank', 'noopener,noreferrer'); return false;"
             >
               <svg
                 class="w-8 h-8 sm:w-10 sm:h-10"
@@ -701,6 +746,23 @@
               >
                 <path
                   d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                /></svg
+            ></a>
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/profile.php?id=61584283663661"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon bg-white p-4 sm:p-5 rounded-full shadow-lg hover:shadow-xl"
+            >
+              <svg
+                class="w-8 h-8 sm:w-10 sm:h-10"
+                style="color: #1877f2"
+                fill="currentColor"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
                 /></svg
             ></a>
             <!-- Pinterest -->
@@ -757,7 +819,7 @@
                   <h4
                     class="font-semibold text-gray-800 mb-1 sm:mb-2 text-base sm:text-lg"
                   >
-                    Email
+                    📫 Email
                   </h4>
                   <p class="text-sm sm:text-base">wuweiclothing@gmail.com</p>
                 </div>
@@ -765,22 +827,31 @@
                   <h4
                     class="font-semibold text-gray-800 mb-1 sm:mb-2 text-base sm:text-lg"
                   >
-                    WhatsApp
+                    💭 WhatsApp
                   </h4>
-                  <p class="text-sm sm:text-base">+52 56 63672588</p>
+                  <p class="text-sm sm:text-base">5610677516</p>
                 </div>
               </div>
-              <div>
-                <h4
-                  class="font-semibold text-gray-800 mb-1 sm:mb-2 text-base sm:text-lg"
-                >
-                  Dirección
-                </h4>
-                <p class="text-sm sm:text-base leading-relaxed">
-                  🌏​Estamos únicamente online<br />
-                  💳​Comercio electrónico<br />
-                  ⛺​💻​Somos nómadas digitales <br />
-                </p>
+              <div class="space-y-3 sm:space-y-4">
+                <div>
+                  <h4
+                    class="font-semibold text-gray-800 mb-1 sm:mb-2 text-base sm:text-lg"
+                  >
+                    📱 Atención
+                  </h4>
+                  <p class="text-sm sm:text-base">Únicamente online</p>
+                </div>
+                <div>
+                  <h4
+                    class="font-semibold text-gray-800 mb-1 sm:mb-2 text-base sm:text-lg"
+                  >
+                    📦 Envíos
+                  </h4>
+                  <p class="text-sm sm:text-base leading-relaxed">
+                    Por paquetería a toda la<br />
+                    República Mexicana
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -808,22 +879,166 @@
           </div>
         </div>
       </section>
+      <!-- Floating Chat Button -->
+      <button
+        id="chat-toggle-btn"
+        class="fixed bottom-6 right-6 w-16 h-16 bg-purple-600 text-white rounded-full shadow-2xl hover:bg-purple-700 transition-all z-50 flex items-center justify-center"
+      >
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewbox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+          />
+        </svg>
+      </button>
+      <!-- Floating Chat Window -->
+      <div
+        id="chat-window"
+        class="fixed bottom-24 right-6 w-96 bg-white rounded-2xl shadow-2xl z-50 hidden overflow-hidden"
+        style="max-height: 600px"
+      >
+        <!-- Chat Header -->
+        <div
+          class="bg-purple-600 text-white p-4 flex items-center justify-between"
+        >
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center font-bold"
+            >
+              WW
+            </div>
+            <div>
+              <h3 class="font-bold">Asistente Wu Wei</h3>
+              <p class="text-xs opacity-90">Siempre online</p>
+            </div>
+          </div>
+          <button
+            id="chat-close-btn"
+            class="text-white hover:bg-white hover:bg-opacity-20 rounded-full p-2 transition-all"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewbox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <!-- Chat Messages -->
+        <div
+          id="chat-messages"
+          class="h-96 overflow-y-auto p-4 space-y-4 bg-gray-50"
+        >
+          <!-- Welcome Message -->
+          <div class="flex items-start space-x-2">
+            <div
+              class="flex-shrink-0 w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white text-xs font-bold"
+            >
+              WW
+            </div>
+            <div
+              class="bg-white rounded-2xl rounded-tl-none p-3 shadow-md max-w-xs"
+            >
+              <p class="text-sm text-gray-800">
+                ¡Hola! 🌱 Soy el asistente de Wu Wei. ¿En qué puedo ayudarte?
+              </p>
+              <p class="text-xs text-gray-500 mt-2">Pregúntame sobre:</p>
+              <ul class="text-xs text-gray-600 mt-1 space-y-1">
+                <li>• Precios y tallas</li>
+                <li>• Envíos y pagos</li>
+                <li>• Filosofía Wu Wei</li>
+                <li>• Contacto</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Quick Suggestions -->
+        <div
+          id="quick-suggestions"
+          class="px-4 py-3 bg-white border-t border-gray-200"
+        >
+          <div class="flex flex-wrap gap-2">
+            <button
+              class="suggestion-btn text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full hover:bg-purple-200 transition-all"
+            >
+              ¿Precios?
+            </button>
+            <button
+              class="suggestion-btn text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full hover:bg-purple-200 transition-all"
+            >
+              ¿Tallas?
+            </button>
+            <button
+              class="suggestion-btn text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full hover:bg-purple-200 transition-all"
+            >
+              ¿Envíos?
+            </button>
+            <button
+              class="suggestion-btn text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full hover:bg-purple-200 transition-all"
+            >
+              ¿Wu Wei?
+            </button>
+          </div>
+        </div>
+        <!-- Chat Input -->
+        <form id="chat-form" class="p-3 bg-white border-t border-gray-200">
+          <div class="flex space-x-2">
+            <input
+              type="text"
+              id="chat-input"
+              placeholder="Escribe aquí..."
+              class="flex-1 px-3 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm text-gray-800"
+              autocomplete="off"
+            />
+            <button
+              type="submit"
+              class="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition-all text-sm font-semibold"
+            >
+              →
+            </button>
+          </div>
+        </form>
+      </div>
       <!-- Footer CTA -->
       <footer
         class="gradient-bg py-12 sm:py-16 px-4 sm:px-6 text-center text-white"
       >
+        <!-- Logo en el footer -->
+        <div class="mb-8 sm:mb-10">
+          <img
+            src="https://raw.githubusercontent.com/frontenddeveloper2025dev/landingpage/refs/heads/main/wuwei%20logo.png"
+            alt="Wu Wei Logo"
+            class="h-20 sm:h-24 md:h-28 lg:h-32 w-auto mx-auto mb-6"
+            loading="lazy"
+            onerror="this.style.display='none';"
+          />
+        </div>
         <h2
           class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 px-2"
         >
           ¿Listo para tu transformación Wu Wei?
         </h2>
         <p class="text-lg sm:text-xl mb-6 sm:mb-8 opacity-90 px-2">
-          Encuentra tu merch perfecto que habla tu idioma espiritual
+          Encuentra el kimono que habla tu idioma espiritual
         </p>
         <button
           class="bg-white text-purple-800 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-opacity-90 transition-all"
         >
-          Explorar productos en redes sociales
+          Explorar colección
         </button>
       </footer>
     </main>
@@ -832,7 +1047,7 @@
         logo_link: "#",
         hero_title: "Wu Wei Neurospicy MX",
         hero_subtitle: "moda consciente con flow espiritual",
-        cta_button: "Descubre tu kimono",
+        cta_button: "🛍️ COMPRAR 🛍️",
         mission_title: "Misión",
         vision_title: "Visión",
         values_title: "Valores Wu Wei",
@@ -912,13 +1127,31 @@
         document.documentElement.style.fontSize = `${baseSize}px`;
       }
 
+      // Mobile menu toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll(".mobile-link").forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      }
+
       // Smooth scrolling for navigation links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute("href"));
           if (target) {
-            const offsetTop = target.offsetTop - 200; // Account for fixed nav height
+            const navHeight = window.innerWidth < 1024 ? 80 : 100;
+            const offsetTop = target.offsetTop - navHeight;
             window.scrollTo({
               top: offsetTop,
               behavior: "smooth",
@@ -1016,6 +1249,194 @@
             ]),
         });
       }
+
+      // Chatbot toggle functionality
+      const chatToggleBtn = document.getElementById("chat-toggle-btn");
+      const chatWindow = document.getElementById("chat-window");
+      const chatCloseBtn = document.getElementById("chat-close-btn");
+      const chatMessages = document.getElementById("chat-messages");
+      const chatForm = document.getElementById("chat-form");
+      const chatInput = document.getElementById("chat-input");
+      const suggestionButtons = document.querySelectorAll(".suggestion-btn");
+
+      chatToggleBtn.addEventListener("click", () => {
+        chatWindow.classList.toggle("hidden");
+        if (!chatWindow.classList.contains("hidden")) {
+          chatInput.focus();
+        }
+      });
+
+      chatCloseBtn.addEventListener("click", () => {
+        chatWindow.classList.add("hidden");
+      });
+
+      // Bot knowledge base
+      const botResponses = {
+        precio: {
+          keywords: [
+            "precio",
+            "cuánto",
+            "cuesta",
+            "cuestan",
+            "costo",
+            "vale",
+            "valen",
+          ],
+          response:
+            "Todos nuestros kimonos tienen un precio de $500 pesos 💰. Son piezas únicas, unisex y body positive, diseñadas con amor desde la CDMX. 🌱",
+        },
+        tallas: {
+          keywords: ["talla", "tallas", "tamaño", "medida", "size"],
+          response:
+            "Tenemos 5 tallas disponibles: CH (Chico), M (Mediano), G (Grande), XG (Extra Grande) y XXG (Doble Extra Grande) 📏. Nuestros kimonos son inclusivos y se adaptan a todos los cuerpos. ✨",
+        },
+        envios: {
+          keywords: [
+            "envío",
+            "envíos",
+            "envio",
+            "enviar",
+            "entrega",
+            "paquetería",
+            "transportación",
+          ],
+          response:
+            "Hacemos envíos por paquetería a toda la República Mexicana. En la CDMX también ofrecemos entrega en bicicleta 🚴‍♀️ para mantener nuestro compromiso con el medio ambiente.",
+        },
+        pago: {
+          keywords: [
+            "pago",
+            "pagos",
+            "pagar",
+            "tarjeta",
+            "transferencia",
+            "método",
+          ],
+          response:
+            "Aceptamos pagos con tarjeta 💳 o transferencia bancaria. Queremos que tu experiencia de compra sea tan fluida como nuestra filosofía Wu Wei. 🌊",
+        },
+        wuwei: {
+          keywords: [
+            "wu wei",
+            "wuwei",
+            "filosofía",
+            "significa",
+            "qué es",
+            "taoismo",
+          ],
+          response:
+            'Wu Wei es un principio del Taoísmo que significa "no forzar, fluir con la vida, actuar sin violencia interna". No es pasividad, es potencia tranquila. Es crear desde el centro, seguir tu intuición sin burnout. 🧘‍♀️✨',
+        },
+        contacto: {
+          keywords: [
+            "contacto",
+            "contactar",
+            "email",
+            "correo",
+            "whatsapp",
+            "teléfono",
+            "hablar",
+          ],
+          response:
+            "Puedes contactarnos por:\n📧 Email: wuweiclothing@gmail.com\n📱 WhatsApp: 5610677516\n\nTambién estamos en Instagram (@wuweineurospicy_clothing), Pinterest y GitHub. ¡Nuestra atención es 100% online! 💜",
+        },
+        mision: {
+          keywords: ["misión", "mision", "propósito", "objetivo"],
+          response:
+            "Nuestra misión es vestir el alma con propósito. Diseñamos prendas que te abracen, no que te limiten. Convertimos cada kimono en un mantra, un espejo, un refugio. Empoderamos con diseño, espiritualidad y autoexpresión radical. 🌟",
+        },
+        valores: {
+          keywords: ["valores", "valor", "principios", "creencia"],
+          response:
+            "Nuestros valores incluyen: Empoderamiento real, Flow auténtico, Inclusión corporal, Neurodivergencia visible, Género libre, Compasión encarnada, Mindfulness textil y Autonomía radical. 💜🌈",
+        },
+        neurospicy: {
+          keywords: [
+            "neurospicy",
+            "neurodivergente",
+            "neurodivergencia",
+            "mente",
+          ],
+          response:
+            "Somos un refugio para mentes neurospicy - personas neurodivergentes que piensan diferente. Para nosotros, pensar diferente es poder. ✨🧠 Nuestros kimonos son para almas libres y cuerpos que no entran en moldes normativos.",
+        },
+        kimonos: {
+          keywords: ["kimono", "kimonos", "ropa", "prenda", "producto"],
+          response:
+            "Cada kimono es un ritual, una armadura suave, una declaración viva de quién eres. 🌱 No es solo ropa, es presencia, es acto creativo, es una forma de habitar el cuerpo con amor, con flow y sin permiso.",
+        },
+      };
+
+      function addMessage(text, isBot = false) {
+        const messageDiv = document.createElement("div");
+        messageDiv.className = `flex items-start space-x-2 ${
+          isBot ? "" : "flex-row-reverse space-x-reverse"
+        }`;
+
+        const avatar = document.createElement("div");
+        avatar.className = `flex-shrink-0 w-8 h-8 rounded-full ${
+          isBot ? "bg-purple-600" : "bg-teal-500"
+        } flex items-center justify-center text-white text-xs font-bold`;
+        avatar.textContent = isBot ? "WW" : "TÚ";
+
+        const bubble = document.createElement("div");
+        bubble.className = `${
+          isBot
+            ? "bg-white rounded-tl-none"
+            : "bg-purple-600 text-white rounded-tr-none"
+        } rounded-2xl p-3 shadow-md max-w-xs`;
+        bubble.innerHTML = `<p class="text-sm ${
+          isBot ? "text-gray-800" : "text-white"
+        }" style="white-space: pre-line;">${text}</p>`;
+
+        messageDiv.appendChild(avatar);
+        messageDiv.appendChild(bubble);
+        chatMessages.appendChild(messageDiv);
+
+        // Scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      function getBotResponse(userMessage) {
+        const lowerMessage = userMessage.toLowerCase();
+
+        // Check each category
+        for (const [category, data] of Object.entries(botResponses)) {
+          if (data.keywords.some((keyword) => lowerMessage.includes(keyword))) {
+            return data.response;
+          }
+        }
+
+        // Default response
+        return "Hmm, no estoy seguro de cómo responder eso. ��� Puedes preguntarme sobre precios, tallas, envíos, pagos, nuestra filosofía Wu Wei, o cómo contactarnos. También puedes usar los botones de preguntas rápidas. 💜";
+      }
+
+      function handleUserMessage(message) {
+        if (!message.trim()) return;
+
+        // Add user message
+        addMessage(message, false);
+        chatInput.value = "";
+
+        // Simulate typing delay
+        setTimeout(() => {
+          const response = getBotResponse(message);
+          addMessage(response, true);
+        }, 800);
+      }
+
+      // Form submission
+      chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        handleUserMessage(chatInput.value);
+      });
+
+      // Suggestion buttons
+      suggestionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          handleUserMessage(button.textContent);
+        });
+      });
     </script>
     <script>
       (function () {
@@ -1024,7 +1445,7 @@
           if (b) {
             var d = b.createElement("script");
             d.innerHTML =
-              "window.__CF$cv$params={r:'99887a1f81d0dc82',t:'MTc2MjEzNzMxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+              "window.__CF$cv$params={r:'9c0a297607f2ac68',t:'MTc2ODg2NTg2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
             b.getElementsByTagName("head")[0].appendChild(d);
           }
         }
